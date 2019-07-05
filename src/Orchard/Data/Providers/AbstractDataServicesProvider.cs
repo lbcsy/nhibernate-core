@@ -153,7 +153,7 @@ namespace Orchard.Data.Providers {
                 //    }));
                 //}
 
-                var keyToLoad = new EntityKey(@event.EntityId, entityPersister, source.EntityMode);
+                var keyToLoad = new EntityKey(@event.EntityId, entityPersister);
 
                 if (loadType.IsNakedEntityReturned) {
                     @event.Result = Load(@event, entityPersister, keyToLoad, loadType);

@@ -1,5 +1,7 @@
 using System;
 using System.Globalization;
+using System.Threading;
+using System.Threading.Tasks;
 using Microsoft.ApplicationServer.Caching;
 using NHibernate;
 using NHibernate.Cache;
@@ -36,6 +38,30 @@ namespace Orchard.Azure.Services.Caching.Database {
         private readonly string _region;
         private readonly string _regionAlphaNumeric;
         private readonly TimeSpan? _expirationTime;
+
+        public Task<object> GetAsync(object key, CancellationToken cancellationToken) {
+            throw new NotImplementedException();
+        }
+
+        public Task PutAsync(object key, object value, CancellationToken cancellationToken) {
+            throw new NotImplementedException();
+        }
+
+        public Task RemoveAsync(object key, CancellationToken cancellationToken) {
+            throw new NotImplementedException();
+        }
+
+        public Task ClearAsync(CancellationToken cancellationToken) {
+            throw new NotImplementedException();
+        }
+
+        public Task LockAsync(object key, CancellationToken cancellationToken) {
+            throw new NotImplementedException();
+        }
+
+        public Task UnlockAsync(object key, CancellationToken cancellationToken) {
+            throw new NotImplementedException();
+        }
 
         public object Get(object key) {
             if (key == null) {
