@@ -277,7 +277,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Conditions", "Orcha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Resources", "Orchard.Web\Modules\Orchard.Resources\Orchard.Resources.csproj", "{D4E8F7C8-2DB2-4C50-A422-DA1DF1E3CC73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.Linq", "..\lib\nhibernate.linq\src\NHibernate.Linq\NHibernate.Linq.csproj", "{B4D00CB9-25B2-4842-B03E-C9EC03E984C8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{F8F26A7D-620C-44EA-8C78-2F5B69E3B36A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NHibernate.Linq", "NHibernate.Linq", "{CE9D344B-29B2-41A4-A4B1-D9277E892550}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.Linq", "..\lib\nhibernate.linq\1.0.0.GA\src\NHibernate.Linq\NHibernate.Linq.csproj", "{2CF9A83A-BC40-4485-A763-BFF59B2EBDAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.Linq.Tests", "..\lib\nhibernate.linq\1.0.0.GA\src\NHibernate.Linq.Tests\NHibernate.Linq.Tests.csproj", "{B09778CE-44FD-4BE2-AB1E-9AFDFACB8279}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Entities", "..\lib\nhibernate.linq\1.0.0.GA\src\Northwind.Entities\Northwind.Entities.csproj", "{A99E0AEA-8FA5-4C32-9B0B-E84DC5AB30F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1105,16 +1113,36 @@ Global
 		{D4E8F7C8-2DB2-4C50-A422-DA1DF1E3CC73}.FxCop|Any CPU.ActiveCfg = Release|Any CPU
 		{D4E8F7C8-2DB2-4C50-A422-DA1DF1E3CC73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4E8F7C8-2DB2-4C50-A422-DA1DF1E3CC73}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B4D00CB9-25B2-4842-B03E-C9EC03E984C8}.CodeCoverage|Any CPU.ActiveCfg = Release|Any CPU
-		{B4D00CB9-25B2-4842-B03E-C9EC03E984C8}.CodeCoverage|Any CPU.Build.0 = Release|Any CPU
-		{B4D00CB9-25B2-4842-B03E-C9EC03E984C8}.Coverage|Any CPU.ActiveCfg = Release|Any CPU
-		{B4D00CB9-25B2-4842-B03E-C9EC03E984C8}.Coverage|Any CPU.Build.0 = Release|Any CPU
-		{B4D00CB9-25B2-4842-B03E-C9EC03E984C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4D00CB9-25B2-4842-B03E-C9EC03E984C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4D00CB9-25B2-4842-B03E-C9EC03E984C8}.FxCop|Any CPU.ActiveCfg = Release|Any CPU
-		{B4D00CB9-25B2-4842-B03E-C9EC03E984C8}.FxCop|Any CPU.Build.0 = Release|Any CPU
-		{B4D00CB9-25B2-4842-B03E-C9EC03E984C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4D00CB9-25B2-4842-B03E-C9EC03E984C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CF9A83A-BC40-4485-A763-BFF59B2EBDAD}.CodeCoverage|Any CPU.ActiveCfg = Release|Any CPU
+		{2CF9A83A-BC40-4485-A763-BFF59B2EBDAD}.CodeCoverage|Any CPU.Build.0 = Release|Any CPU
+		{2CF9A83A-BC40-4485-A763-BFF59B2EBDAD}.Coverage|Any CPU.ActiveCfg = Release|Any CPU
+		{2CF9A83A-BC40-4485-A763-BFF59B2EBDAD}.Coverage|Any CPU.Build.0 = Release|Any CPU
+		{2CF9A83A-BC40-4485-A763-BFF59B2EBDAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CF9A83A-BC40-4485-A763-BFF59B2EBDAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CF9A83A-BC40-4485-A763-BFF59B2EBDAD}.FxCop|Any CPU.ActiveCfg = Release|Any CPU
+		{2CF9A83A-BC40-4485-A763-BFF59B2EBDAD}.FxCop|Any CPU.Build.0 = Release|Any CPU
+		{2CF9A83A-BC40-4485-A763-BFF59B2EBDAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CF9A83A-BC40-4485-A763-BFF59B2EBDAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B09778CE-44FD-4BE2-AB1E-9AFDFACB8279}.CodeCoverage|Any CPU.ActiveCfg = Release|Any CPU
+		{B09778CE-44FD-4BE2-AB1E-9AFDFACB8279}.CodeCoverage|Any CPU.Build.0 = Release|Any CPU
+		{B09778CE-44FD-4BE2-AB1E-9AFDFACB8279}.Coverage|Any CPU.ActiveCfg = Release|Any CPU
+		{B09778CE-44FD-4BE2-AB1E-9AFDFACB8279}.Coverage|Any CPU.Build.0 = Release|Any CPU
+		{B09778CE-44FD-4BE2-AB1E-9AFDFACB8279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B09778CE-44FD-4BE2-AB1E-9AFDFACB8279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B09778CE-44FD-4BE2-AB1E-9AFDFACB8279}.FxCop|Any CPU.ActiveCfg = Release|Any CPU
+		{B09778CE-44FD-4BE2-AB1E-9AFDFACB8279}.FxCop|Any CPU.Build.0 = Release|Any CPU
+		{B09778CE-44FD-4BE2-AB1E-9AFDFACB8279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B09778CE-44FD-4BE2-AB1E-9AFDFACB8279}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A99E0AEA-8FA5-4C32-9B0B-E84DC5AB30F4}.CodeCoverage|Any CPU.ActiveCfg = Release|Any CPU
+		{A99E0AEA-8FA5-4C32-9B0B-E84DC5AB30F4}.CodeCoverage|Any CPU.Build.0 = Release|Any CPU
+		{A99E0AEA-8FA5-4C32-9B0B-E84DC5AB30F4}.Coverage|Any CPU.ActiveCfg = Release|Any CPU
+		{A99E0AEA-8FA5-4C32-9B0B-E84DC5AB30F4}.Coverage|Any CPU.Build.0 = Release|Any CPU
+		{A99E0AEA-8FA5-4C32-9B0B-E84DC5AB30F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A99E0AEA-8FA5-4C32-9B0B-E84DC5AB30F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A99E0AEA-8FA5-4C32-9B0B-E84DC5AB30F4}.FxCop|Any CPU.ActiveCfg = Release|Any CPU
+		{A99E0AEA-8FA5-4C32-9B0B-E84DC5AB30F4}.FxCop|Any CPU.Build.0 = Release|Any CPU
+		{A99E0AEA-8FA5-4C32-9B0B-E84DC5AB30F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A99E0AEA-8FA5-4C32-9B0B-E84DC5AB30F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1202,9 +1230,13 @@ Global
 		{90EBEE36-B5CD-42A8-A21B-76270E2C5D24} = {DF3909B0-1DDD-4D8A-9919-56FC438E25E2}
 		{98251EAE-A41B-47B2-AA91-E28B8482DA70} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
 		{D4E8F7C8-2DB2-4C50-A422-DA1DF1E3CC73} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
+		{CE9D344B-29B2-41A4-A4B1-D9277E892550} = {F8F26A7D-620C-44EA-8C78-2F5B69E3B36A}
+		{2CF9A83A-BC40-4485-A763-BFF59B2EBDAD} = {CE9D344B-29B2-41A4-A4B1-D9277E892550}
+		{B09778CE-44FD-4BE2-AB1E-9AFDFACB8279} = {CE9D344B-29B2-41A4-A4B1-D9277E892550}
+		{A99E0AEA-8FA5-4C32-9B0B-E84DC5AB30F4} = {CE9D344B-29B2-41A4-A4B1-D9277E892550}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {3585D970-275B-4363-9F61-CD37CFC9DCD3}
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\TransientFaultHandling.Core.5.1.1209.1\lib\NET4
+		SolutionGuid = {3585D970-275B-4363-9F61-CD37CFC9DCD3}
 	EndGlobalSection
 EndGlobal
