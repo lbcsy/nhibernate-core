@@ -66,20 +66,21 @@ namespace NHibernate.Linq.Expressions
 
 		#region ICriterion Members
 
-		public virtual TypedValue[] GetTypedValues(ICriteria criteria, ICriteriaQuery criteriaQuery)
+        
+        public virtual TypedValue[] GetTypedValues(ICriteria criteria, ICriteriaQuery criteriaQuery)
 		{
 			var values = new List<TypedValue>();
 			if (ParameterValues != null)
 			{
 				for (int i = 0; i < ParameterValues.Length; i++)
 				{
-					values.Add(new TypedValue(TypeFactory.HeuristicType(ParameterTypes[i].Name), ParameterValues[i], EntityMode.Poco));
+					values.Add(new TypedValue(TypeFactory.HeuristicType(ParameterTypes[i].Name), ParameterValues[i]));
 				}
 			}
 			if (ReturnType != null && InnerCriterion is SimpleExpression)
 			{
 				var simple = InnerCriterion as SimpleExpression;
-				values.Add(new TypedValue(TypeFactory.HeuristicType(ReturnType.Name), simple.Value, EntityMode.Poco));
+				values.Add(new TypedValue(TypeFactory.HeuristicType(ReturnType.Name), simple.Value));
 			}
 			if (RightFunction != null)
 			{
@@ -88,9 +89,8 @@ namespace NHibernate.Linq.Expressions
 
 			return values.ToArray();
 		}
-
-		public virtual SqlString ToSqlString(ICriteria criteria, ICriteriaQuery criteriaQuery,
-											 IDictionary<string, IFilter> enabledFilters)
+        
+		public virtual SqlString ToSqlString(ICriteria criteria, ICriteriaQuery criteriaQuery)
 		{
 			var sql = new SqlStringBuilder();
 			string leftPropertyName = null;

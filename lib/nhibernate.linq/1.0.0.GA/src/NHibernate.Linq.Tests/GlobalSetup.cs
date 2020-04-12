@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using NHibernate.Cfg;
 using NHibernate.Linq.Tests.Entities;
 using NHibernate.Tool.hbm2ddl;
@@ -287,7 +288,7 @@ namespace NHibernate.Linq.Tests
 			return factory.OpenSession();
 		}
 
-		public static ISession CreateSession(IDbConnection con)
+		public static ISession CreateSession(DbConnection con)
 		{
 			return factory.OpenSession(con);
 		}

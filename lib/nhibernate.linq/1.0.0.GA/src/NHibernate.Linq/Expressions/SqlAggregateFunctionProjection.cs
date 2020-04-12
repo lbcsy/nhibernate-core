@@ -47,7 +47,7 @@ namespace NHibernate.Linq.Expressions
 			return base.GetTypes(criteria, criteriaQuery);
 		}
 
-		public override SqlString ToSqlString(ICriteria criteria, int loc, ICriteriaQuery criteriaQuery, IDictionary<string, IFilter> enabledFilter)
+		public override SqlString ToSqlString(ICriteria criteria, int loc, ICriteriaQuery criteriaQuery)
 		{
 			if (ParameterValues != null && ParameterValues.Length > 0)
 			{
@@ -82,7 +82,7 @@ namespace NHibernate.Linq.Expressions
 			}
 
 			// if ParameterValues were not specified, we defer to the base functionality
-			return base.ToSqlString(criteria, loc, criteriaQuery, enabledFilter);
+			return base.ToSqlString(criteria, loc, criteriaQuery);
 		}
 	}
 }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using NHibernate.Criterion;
 using NHibernate.SqlCommand;
 using NHibernate.Transform;
@@ -191,7 +193,27 @@ namespace NHibernate.Linq.Util
 			return detachedCriteria.SetProjection(projection).Adapt(session);
 		}
 
-		public ICriteria SetProjection(params IProjection[] projections)
+        public async Task<IList> ListAsync(CancellationToken cancellationToken = new CancellationToken()) {
+            throw new NotImplementedException();
+        }
+
+        public async Task<object> UniqueResultAsync(CancellationToken cancellationToken = new CancellationToken()) {
+            throw new NotImplementedException();
+        }
+
+        public async Task ListAsync(IList results, CancellationToken cancellationToken = new CancellationToken()) {
+            throw new NotImplementedException();
+        }
+
+        public async Task<IList<T>> ListAsync<T>(CancellationToken cancellationToken = new CancellationToken()) {
+            throw new NotImplementedException();
+        }
+
+        public async Task<T> UniqueResultAsync<T>(CancellationToken cancellationToken = new CancellationToken()) {
+            throw new NotImplementedException();
+        }
+
+        public ICriteria SetProjection(params IProjection[] projections)
 		{
 			var projectionList = Projections.ProjectionList();
 			foreach (var proj in projections)
@@ -220,7 +242,11 @@ namespace NHibernate.Linq.Util
 			throw new NotSupportedException();
 		}
 
-		public System.Type GetRootEntityTypeIfAvailable()
+        IFutureEnumerable<T> ICriteria.Future<T>() {
+            throw new NotImplementedException();
+        }
+
+        public System.Type GetRootEntityTypeIfAvailable()
 		{
 			return detachedCriteria.GetRootEntityTypeIfAvailable();
 		}

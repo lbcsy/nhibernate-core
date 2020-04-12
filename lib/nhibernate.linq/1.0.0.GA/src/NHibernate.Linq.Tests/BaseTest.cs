@@ -36,7 +36,7 @@ namespace NHibernate.Linq.Tests
 
 		protected virtual ISession CreateSession()
 		{
-			IDbConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings[ConnectionStringName].ConnectionString);
+			var con = new SqlConnection(ConfigurationManager.ConnectionStrings[ConnectionStringName].ConnectionString);
 			con.Open();
 			return GlobalSetup.CreateSession(con);
 		}

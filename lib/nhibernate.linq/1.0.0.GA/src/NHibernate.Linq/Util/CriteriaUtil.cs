@@ -116,7 +116,7 @@ namespace NHibernate.Linq.Util
 			if (persister == null)
 				throw new InvalidOperationException("Could not find entity named: " + criteria.EntityOrClassName);
 
-			return persister.GetMappedClass(EntityMode.Poco);
+			return persister.MappedClass;
 		}
 	}
 }
