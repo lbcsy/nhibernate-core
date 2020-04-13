@@ -291,6 +291,7 @@ namespace Orchard.Tests.Localization {
                         }
                         catch (Exception ex) {
                             failedCases.TryAdd(caseKey, ex);
+                            Debug.WriteLine($"Faied with culture={culture}, dateFormat={dateFormat}, error={ex.Message}");
                         }
                     }
                 }
@@ -535,7 +536,10 @@ namespace Orchard.Tests.Localization {
                         }
 
                         var dateTime = new DateTime(1998, 1, 1, 10, 30, 30, 678, kind);
-                        var dateTimeOffset = new DateTimeOffset(dateTime, timeZone.BaseUtcOffset);
+                        if (timeZone == TimeZoneInfo.Local) {
+                            offset = TimeZoneInfo.Local.GetUtcOffset(dateTime);
+                        }
+                        var dateTimeOffset = new DateTimeOffset(dateTime, offset);
                         var dateTimeParts = DateTimeParts.FromDateTime(dateTime, offset);
 
                         // Print reference string using Gregorian calendar to avoid calendar conversion.
