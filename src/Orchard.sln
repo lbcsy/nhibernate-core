@@ -287,6 +287,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.Linq.Tests", "..
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Entities", "..\lib\nhibernate.linq\1.0.0.GA\src\Northwind.Entities\Northwind.Entities.csproj", "{A99E0AEA-8FA5-4C32-9B0B-E84DC5AB30F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDateTimeOffset", "..\..\..\dev\TestDateTimeOffset\TestDateTimeOffset.csproj", "{54DB5CAD-5E5F-4F5D-94AC-5D22FC7D6F36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CodeCoverage|Any CPU = CodeCoverage|Any CPU
@@ -1143,6 +1145,16 @@ Global
 		{A99E0AEA-8FA5-4C32-9B0B-E84DC5AB30F4}.FxCop|Any CPU.Build.0 = Release|Any CPU
 		{A99E0AEA-8FA5-4C32-9B0B-E84DC5AB30F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A99E0AEA-8FA5-4C32-9B0B-E84DC5AB30F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54DB5CAD-5E5F-4F5D-94AC-5D22FC7D6F36}.CodeCoverage|Any CPU.ActiveCfg = Release|Any CPU
+		{54DB5CAD-5E5F-4F5D-94AC-5D22FC7D6F36}.CodeCoverage|Any CPU.Build.0 = Release|Any CPU
+		{54DB5CAD-5E5F-4F5D-94AC-5D22FC7D6F36}.Coverage|Any CPU.ActiveCfg = Release|Any CPU
+		{54DB5CAD-5E5F-4F5D-94AC-5D22FC7D6F36}.Coverage|Any CPU.Build.0 = Release|Any CPU
+		{54DB5CAD-5E5F-4F5D-94AC-5D22FC7D6F36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54DB5CAD-5E5F-4F5D-94AC-5D22FC7D6F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54DB5CAD-5E5F-4F5D-94AC-5D22FC7D6F36}.FxCop|Any CPU.ActiveCfg = Release|Any CPU
+		{54DB5CAD-5E5F-4F5D-94AC-5D22FC7D6F36}.FxCop|Any CPU.Build.0 = Release|Any CPU
+		{54DB5CAD-5E5F-4F5D-94AC-5D22FC7D6F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54DB5CAD-5E5F-4F5D-94AC-5D22FC7D6F36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1236,7 +1248,7 @@ Global
 		{A99E0AEA-8FA5-4C32-9B0B-E84DC5AB30F4} = {CE9D344B-29B2-41A4-A4B1-D9277E892550}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPath = packages\TransientFaultHandling.Core.5.1.1209.1\lib\NET4
 		SolutionGuid = {3585D970-275B-4363-9F61-CD37CFC9DCD3}
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\TransientFaultHandling.Core.5.1.1209.1\lib\NET4
 	EndGlobalSection
 EndGlobal
